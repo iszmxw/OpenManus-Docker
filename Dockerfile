@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     && rm -r /var/lib/apt/lists/*
 
 # 克隆 OpenManus 仓库（包含 requirements.txt 和 config/config.example.toml）
-RUN git clone https://github.com/mannaandpoem/OpenManus.git .
+RUN git clone https://gitee.com/xiaofeixi/OpenManus.git .
 
 # 安装 Python 依赖，通过国内镜像源
 RUN pip install --no-cache-dir -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
