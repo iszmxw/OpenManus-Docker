@@ -23,7 +23,7 @@ RUN git clone https://github.com/mannaandpoem/OpenManus.git .
 RUN pip install --no-cache-dir -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 # 创建 config 目录并复制示例配置文件（如果需要覆盖，可通过 volume 挂载）
-RUN mkdir -p config && cp config.example.toml config/config.toml
+RUN mkdir -p config && cp config/config.example.toml config/config.toml
 
 # 启动命令
 CMD ["python", "main.py"]
